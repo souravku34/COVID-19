@@ -1,0 +1,41 @@
+.container{
+        height: 20px;
+}
+.up{
+    background-color: #a5ced1;
+    text-align: center;
+    color: white;
+    height: 170px;
+}
+.change_content::after{
+    content: '';
+    animation: changetext 20s infinite linear;
+    font-size:20px; font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@keyframes changetext{
+    0%{content:"Take special care of the elderly, especially those with chronic disease.We have to take extra care of them, and keep them safe from coronavirus."}
+    16%{content: "Keep your faces covered, wear masks, etc.";}
+    32%{content: "To strengthen your immunity, follow the advice of the AYUSH ministry.";}
+    48%{content: "To track the spread of the virus, download the Arogya Setu app and inspires other also .";}
+    64%{content: "As much as possible, take care of the poor people.";}
+    80%{content: "To be sensitive as an employer towards your employees.";}
+    100%{content: "Have a great regard for the warriors of this country who are at the frontlines of our fight against the virus.";}
+}
+.xyz{
+    font-size: small; 
+    color: #0f6910; 
+    padding-left:20px;
+   
+}
+.xya{
+    font-size: small; 
+}
+.xyb{
+    font-size: small; 
+    text-align: center;
+    color: #c75640;
+}
+.uu{
+    font-size:30px;
+}
