@@ -9,6 +9,64 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>COVID</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+        ['State', 'Active Cases'],
+['Maharashtra', 3470],
+['Delhi',   1668],
+['Gujarat', 1575],
+['Rajasthan', 1266],
+['Tamil Nadu',  1051],
+['Madhya Pradesh', 1204],
+['Uttar Pradesh',956],
+['Telangana',651],
+['Andhra Pradesh', 565],
+['Kerala',129],
+['Karnataka',263],
+['Jammu and Kashmir',293],
+['West Bengal', 261],
+['Haryana',143],
+['Punjab', 191],
+['Bihar', 52],
+['Odisha',43],
+['Uttarakhand', 33],
+['Jharkhand',39],
+['Himachal Pradesh', 21],
+['Chhattisgarh',11],
+['Assam', 17],
+['Chandigarh', 13],
+['Ladakh', 4],
+['Andaman and Nicobar Islands', 4],
+['Meghalaya', 10],
+['Puducherry', 3],
+['Tripura(1)',  1],
+['Mizoram(1)',  1]
+        ]);
+
+        var options = {
+          title: 'Chess opening moves',
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'No.Of Active Cases in States/UT'
+                  },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'cases(in number)'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
   </head>
   <body>
      <br>
@@ -20,7 +78,7 @@
      <div class="container">
       <div class="row" >
         <div class="col-xs-6 text-dark pl-1"><b>JHARKHAND COVID-19 <BR>TRACKER</b></div>
-        <div class="col-xs-6  xyz"><p class="animated infinite pulse xyb">LAST UPDATED <BR>20 APRIL 2020 <BR>10:14 IST</p></div>
+        <div class="col-xs-6  xyz"><p class="animated infinite pulse xyb">LAST UPDATED <BR>20 APRIL 2020 <BR>11:47 IST</p></div>
       </div></div><br><br><br>
       <div class="container xya">
         <div class="row" >
@@ -151,16 +209,20 @@
               <div class="container uu">
                 <p> <B>INDIA COVID-19 TRACKER</B></p>
                 </div><br><br><br>
-                <div class="container xya">
+               <div class="container xya">
                   <div class="row" >
-                    <div class="col-xs-3 pl-2 text-danger"> CONFIRMED <br>[+53] <br>17,357</div>
-                    <div class="col-xs-3 pl-4 text-primary">ACTIVE <br> <br> 13,938</div>
-                    <div class="col-xs-3 pl-4 text-success">RECOVERED <br> [+5]<br>2,859</div>
-                    <div class="col-xs-3 pl-4 text-dark"> DEATH <br> [+1]<br>560</div>
+                    <div class="col-xs-3 pl-2 text-danger"> CONFIRMED <br>[+136] <br>11,625</div>
+                    <div class="col-xs-3 pl-4 text-primary">ACTIVE <br> <br> 9,861</div>
+                    <div class="col-xs-3 pl-4 text-success">RECOVERED <br> [+1]<br>1,366</div>
+                    <div class="col-xs-3 pl-4 text-dark"> DEATH <br> [+1]<br>398</div>
                   </div>
-                </div><br><br><br>
-                <p class="animated infinite shake  xyb">STAY HOME,STAY SAFE</p><p class="animated infinite pulse  xyb"><a href="index2.html">Know more</a></p>
-      </div> <br><br>  
+                </div><br><br> 
+                <div id="top_x_div" style="width: 500px; height: 500px;"></div>
+                  <br><br>
+                <div>
+                  <p class="animated infinite shake  xyb">STAY HOME,STAY SAFE</p><p class="animated infinite pulse  xyb"><a href="index2.html">Know more</a></p>
+                  <br><br></div>
+      
       </div>
      
     <!-- Optional JavaScript -->
