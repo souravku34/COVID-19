@@ -1,17 +1,17 @@
 .container{
-        height: 20px;
+        height: 20px;isolation: isolate;
 }
 .up{
     background-color: #a5ced1;
     text-align: center;
     color: white;
-    height: 170px;
+    height: 170px;isolation: isolate;
 }
 .change_content::after{
     content: '';
     animation: changetext 20s infinite linear;
     font-size:20px; font-style: oblique;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;isolation: isolate;
 }
 @keyframes changetext{
     0%{content:"Take special care of the elderly, especially those with chronic disease.We have to take extra care of them, and keep them safe from coronavirus."}
@@ -25,22 +25,25 @@
 .xyz{
     font-size: small; 
     color: #0f6910; 
-    padding-left:50px;
+    padding-left:50px;isolation: isolate;
    
 }
 .xya{
-    font-size: small; 
+    font-size: small; isolation: isolate;
 }
 .xyb{
     font-size: small; 
     text-align: center;
-    color: #c75640;
+    color: #c75640;isolation: isolate;
 }
 .uu{
-    font-size:30px;
+    font-size:30px;isolation: isolate;
 }
 .table{
     font-size:small;
     text-align: center;
+}
+.abc{
+   text-align: center;isolation: isolate;
 }
 
